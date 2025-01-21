@@ -1,0 +1,233 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --button-text-color: #000000;
+    --tbutton:rgb(249, 218, 218);
+    --top-div:orange;
+
+    --disp-box-colour:rgb(239, 105, 105);
+
+    --yrinput-colour: rgb(222, 207, 238);
+    --yrimput-border-colour:rgb(206, 182, 231);
+  
+    --inc-button-bg-color: rgb(93, 241, 80);
+    --inc-button-border-color: rgb(148, 239, 106);
+  
+    --dec-button-bg-color: rgb(64, 175, 244);
+    --dec-button-border-color: rgb(64, 175, 244);
+  
+    --reset-button-bg-color:  rgb(244, 64, 85);
+    --reset-button-border-color:rgb(244, 64, 85);
+  }
+  
+  .dark-mode {
+    --bg-color: #121212;
+    --button-text-color: #ffffff;
+    --text-color: #ffffff;
+    --tbutton:rgba(12, 12, 12, 0.58);
+    --top-div:rgb(118, 83, 18);
+
+    --disp-box-colour:rgb(86, 6, 6);
+
+    --yrinput-colour: rgba(222, 207, 238, 0.47);
+    --yrimput-border-colour:rgba(206, 182, 231, 0.632);
+  
+    --inc-button-bg-color: rgb(14, 49, 11);
+    --inc-button-border-color: rgb(26, 57, 11);
+  
+    --dec-button-bg-color: rgb(16, 58, 84);
+    --dec-button-border-color: rgb(17, 61, 89);
+  
+    --reset-button-bg-color:  rgb(87, 12, 21);
+    --reset-button-border-color:rgb(72, 12, 19);
+  }
+body {
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color);
+    color:var(--text-color) ;
+}
+
+.top2 {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    width: 1000%;
+    text-align: center;
+}
+
+
+.optn {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 5px;
+    }
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid var(--top-div);
+    background-color:var(--top-div);
+    color: var( --text-color);
+    width: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    /* max-width: 400px; */
+    margin: 10px auto;
+}
+
+#box1, #box2 {
+    width: 100%;
+    text-align: center;
+}
+
+#box2 {
+    /* padding: 10px; */
+    border: 2px solid var(--disp-box-colour);
+    background-color: var(--disp-box-colour);
+    color: var( --text-color);
+    font-size: 30px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    /* max-width: 400px; */
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#incbtn {
+    border-color:var(--inc-button-border-color);
+    background-color:var(--inc-button-bg-color);
+    color: var( --text-color);
+    height: 100px;
+    font-size: 20px;
+}
+
+#decbtn {
+    border-color:var(--dec-button-border-color) ;
+    background-color: var(--dec-button-bg-color);
+    color: var( --text-color);
+    height: 70px;
+}
+
+#reset {
+    border-color: var(--reset-button-border-color);
+    background-color:var(--reset-button-bg-color);
+    color: var( --text-color);
+}
+
+.yrinput {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:var(--yrinput-colour);
+    color: var( --text-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    /* max-width: 400px; */
+    margin: 0 auto;
+}
+
+input[type="number"] {
+    width: 20%;
+    /* max-width: 200px; */
+    padding: 10px;
+    font-size: 16px;
+    background-color:var(--tbutton);
+
+}
+
+button#set {
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--yrimput-border-colour);
+    color: var( --text-color);
+    width: 20%;
+}
+
+.mainbox {
+    width: 100%;
+    /* max-width: 600px; */
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .top {
+        flex-direction: column;
+        gap: 2%;
+        text-align: center;
+    }
+
+    .yrinput, .box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #box2 {
+        font-size: 24px;
+    }
+
+    input[type="number"] {
+        width: 80%;
+    }
+}
+#togglebtn
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 5px;   
+    font-size: 15px;
+    background-color:var(--bg-color) ;
+    color: var(--text-color);
+}
+#optionss
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 5px;   
+    font-size: 15px;
+    background-color:var(--bg-color) ;
+    color: var(--text-color);
+}
+#para
+{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 100%;  
+    padding: 5px;   
+    font-size: 15px;
+    background-color:var(--bg-color) ;
+    color: var(--text-color);
+}
