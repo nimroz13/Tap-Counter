@@ -2,7 +2,7 @@
 document.getElementById("optionss").addEventListener("change", function () {
     const selectedValue = this.value;
     if (selectedValue === "home") {
-      window.location.href = "";
+      window.location.href = "/";
     } else if (selectedValue === "about") {
       window.location.href = "about.html";
     } else if (selectedValue === "contact") {
