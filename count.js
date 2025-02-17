@@ -1,18 +1,40 @@
 // Increment Button
-let count = 0;
+window.onload = function()
+{
+  let count=localStorage.getItem("count");
+  if(!count)
+  {
+    count=0;
+    localStorage.setItem('count',count);
+  }
+  updateDisplay();
+}
+// let count;
+// if(localStorage.getItem("count").isNaN)
+// {
+  
+//   count=0;
+//   localStorage.setItem('count', 0);
+// }
+
 const updateDisplay = () => {
+  const count=localStorage.getItem("count");
   document.getElementById("display").innerText = count;
 };
 
 document.getElementById("incbtn").onclick = () => {
+  let count=localStorage.getItem("count");
   count++;
+  localStorage.setItem('count', count);
   updateDisplay();
 };
 
 // Decrement Button
 document.getElementById("decbtn").onclick = () => {
+  let count=localStorage.getItem("count");
   if (count > 0) {
     count--;
+    localStorage.setItem('count', count);
     updateDisplay();
   }
 };
@@ -20,6 +42,7 @@ document.getElementById("decbtn").onclick = () => {
 // Reset Button
 document.getElementById("reset").onclick = () => {
   count = 0;
+  localStorage.setItem('count', 0);
   updateDisplay();
 };
 
@@ -43,6 +66,7 @@ document.getElementById("set").onclick = () => {
   // Get the value from the input box and convert it to a number
   if (!isNaN(newValue)) {
     count = newValue; // Update the count variable with the new value
+    localStorage.setItem('count', count);
     updateDisplay(); // Update the display to show the new count
     inputBox.value = null; // Reset the input box to 0
   } else {

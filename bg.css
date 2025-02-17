@@ -157,6 +157,7 @@ input[type="number"] {
     /* max-width: 200px; */
     padding: 10px;
     font-size: 16px;
+    color:  var( --text-color);
     background-color:var(--tbutton);
 
 }
